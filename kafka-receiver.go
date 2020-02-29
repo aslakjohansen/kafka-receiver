@@ -41,7 +41,7 @@ func main () {
             fmt.Println(string(message))
             fmt.Println("----------------------------------------------------------------------------")
             var b []byte = []byte(message)
-            for char := range(b) {
+            for _, char := range(b) {
                 var s string
                 if char==0xA {
                     s = "<NL>"
@@ -50,7 +50,7 @@ func main () {
                 } else {
                     s = string(char)
                 }
-                fmt.Println(fmt.Sprintf("%d : %s", char, s))
+                fmt.Println(fmt.Sprintf("%3d : %s", char, s))
             }
         }
     }
